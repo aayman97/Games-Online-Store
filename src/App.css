@@ -1,38 +1,388 @@
+*{
+  margin : 0;
+  padding: 0;
+}
 .App {
+  background-color: #080204 ;
+  padding-left:2rem;
+  padding-right:2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+}
+
+ul{
+  display: grid;
+  grid-gap: 20px;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(4,1fr);
+}
+
+a{
+  text-decoration: none;
+  font-size: 0.9rem;
+  color : white;
+  display: block;
   text-align: center;
+  padding: 0.6rem;
+  text-transform: uppercase;
+  background:rgba(12,12,12,255);
+  box-shadow: 0 1px 5px rgba(12,12,12,255,0.8);
+}
+a:hover{
+  background:rgba(180,61,62,255);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.TopContainer{
+  margin-top: 30px;
+  padding: 0rem 0rem;
+  display: grid;
+  grid-gap: 60px;
+  grid-template-areas: 
+            'showCase showCase topBox-a'
+            'showCase showCase topBox-b';
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.showCase{
+  grid-area: showCase;
+  min-height: 380px;
+  background-image: url(./Background2.jpg);
+  background-size: cover;
+  background-position: center;
   display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+.showCase div{
+  width : 40%
+}
+.experience{
+  font-size: 3rem;
+  font-weight: bold;
+  width: 90%;
+  line-height: 3rem;
+  letter-spacing: 0.05rem;
+}
+.published{
+  font-size: 0.9rem;
+  font-weight: 300;
+  width: 100%;
+  margin-top:18px;
+  letter-spacing: 0.05rem;
+}
+.showCase button{
+  display: block;
+  background-color: #b74c4b;
+  border: none;
+  color : white;
+  width : 25%;
+  height: 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top:18px;
+  cursor: pointer;
+}
+
+.topBox-a{
+  grid-area: topBox-a;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-evenly;
+}
+.topBox-a h3{
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+}
+.topBox-a h1{
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+}
+.topBox-b{
+  grid-area: topBox-b;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-evenly;
+}
+.topBox-b h3{
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+}
+.topBox-b h1{
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+}
+.topBox-b button{
+  display: block;
+  background-color: rgba(70,91,43,255);
+  border: none;
+  color : white;
+  width : 50%;
+  height: 2rem;
+  align-self: center;
+  text-align: center;
+  font-size: 0.7rem;
+  position: relative;
+  bottom : 5px;
+  cursor: pointer;
+}
+p,h1,h3,h6,h4,h5{
+  color : white
+}
+.newThisWeekContainer{
+  margin-top: 32px;
+   display: grid;
+   grid-gap: 20px;
+   grid-template-columns: repeat(4,1fr);
+}
+.card{
+  display: flex;
+  min-height: 250px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: rgba(12,12,12,255);
+  cursor: pointer;
+}
+.card:hover{
+  background-color: rgba(19,19,19,255);
+}
+.card h1{
+  text-align: center;
+  width: 60%;
+  line-height: 2rem;
+}
+.card h6{
+  text-align: center;
+  width: 59%;
+  margin-top: 5%;
+}
+.sellers{
+  margin-top: 5%;
+}
+.newSeason{
+  padding: 2rem;
+  display: grid;
+  grid-template-columns:repeat(2,1fr) ;
+  grid-gap: 50px;
+}
+.newSeasonImage{
+  min-height: 300px;
+  background-image: url(./halo.png);
+  background-size: cover;
+  background-position: center;
+}
+.newSeasonText{
+  display: flex;
+  align-items: center;
+}
+.newSeasonText h1{
+  font-size: 2.5rem;
+  width: 50%;
+  line-height: 2.5rem;
+  letter-spacing: 0.05rem;
+}
+.newSeasonText h5{
+  margin-top: 2.5%;
+  font-weight: 400;
+  font-size: 1rem;
+  width: 70%;
+}
+.newSeasonText button{
+  display: block;
+  background-color: #b74c4b;
+  border: none;
+  color : white;
+  width : 25%;
+  height: 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+  margin-top:18px;
+  cursor: pointer;
+}
+.gamesContainer{
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-gap: 20px;
+}
+.destiny2{
+  background-image: url(./destiny2.jpeg);
+  min-height: 200px;
+  background-position: center;
+  background-size: cover;
+}
+.watchdog{
+  background-image: url(./watchdog.jpg);
+  min-height: 200px;
+  background-size: cover;
+}
+.masseffect{
+  background-image: url(./masseffect.jpg);
+  min-height: 200px;
+  background-position: center;
+  background-size: cover;
+}
+.prey{
+  background-image: url(./prey.jpg);
+  min-height: 200px;
+  background-position: center;
+  background-size: cover;
+}
+.skyrim{
+  background-image: url(./skyrim.png);
+  min-height: 200px;
+  background-position: center;
+  background-size: cover;
+}
+.dishonored{
+  background-image: url(./dishonored2.jpg);
+  min-height: 200px;
+  background-position: center;
+  background-size: cover;
+}
+.rust{
+  background-image: url(./rust.jpg);
+  min-height: 200px;
+  background-position: center;
+  background-size: cover;
+}
+.narcosis{
+  background-image: url(./narcosis.jpg);
+  min-height: 200px;
+  background-position: center;
+  background-size: cover;
+}
+.copyright{
+  text-align: center;
+  display: block;
+  background:rgba(12,12,12,255);
+  box-shadow: 0 1px 5px rgba(12,12,12,255,0.8);
+  padding: 1rem 0rem;
+  margin-top: 50px;
+ 
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-width : 340px){
+  .App {
+    padding: 1rem;
+  }
+}
+@media (max-width : 325px){
+  .App {
+    padding: 1rem 0.15rem;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width : 801px) and (max-width : 1200px) {
+  .showCase button{
+    width : 40%
   }
-  to {
-    transform: rotate(360deg);
+  .topBox-b button{
+    width : 60%
   }
 }
+
+@media (max-width : 800px) {
+ul{
+  grid-template-columns: 1fr;
+}
+.TopContainer{
+  margin-top: 30px;
+  padding: 0rem 0rem;
+  display: grid;
+  grid-gap: 60px;
+  grid-template-areas: 
+            'showCase showCase'
+            'topBox-a topBox-b';
+
+}
+.topBox-b button{
+  width : 79%
+}
+  .topBox-b button{
+    font-size: 0.6rem;
+  }
+.showCase div{
+  width : 90%
+}
+.showCase button{
+  width : 27%
+}
+.newThisWeekContainer{
+  grid-template-columns: 1fr;
+}
+.newSeason{
+  grid-template-columns: 1fr;
+}
+
+.newSeasonText button{
+  font-size: 0.7rem;
+}
+.gamesContainer{
+  grid-template-columns: 1fr;
+}
+.destiny2{
+  background-image: url(./destiny2.jpeg);
+  min-height: 600px;
+  background-position: center;
+  background-size: cover;
+}
+.watchdog{
+  background-image: url(./watchdog.jpg);
+  min-height: 600px;
+  background-size: cover;
+  
+}
+.masseffect{
+  background-image: url(./masseffect.jpg);
+  min-height: 600px;
+  background-position: center;
+  background-size: cover;
+}
+.prey{
+  background-image: url(./prey.jpg);
+  min-height: 600px;
+  background-position: top ;
+  background-size: cover;
+}
+.skyrim{
+  background-image: url(./skyrim.png);
+  min-height: 600px;
+  background-position: center;
+  background-size: cover;
+}
+.dishonored{
+  background-image: url(./dishonored2.jpg);
+  min-height: 600px;
+  background-position: top;
+  background-size: cover;
+}
+.rust{
+  background-image: url(./rust.jpg);
+  min-height: 600px;
+  background-position: center;
+  background-size: cover;
+}
+.narcosis{
+  background-image: url(./narcosis.jpg);
+  min-height: 600px;
+  background-position: bottom;
+  background-size: cover;
+}
+.newSeasonText h1{
+  font-size: 2.5rem;
+  width: 80%;
+  line-height: 2.5rem;
+  letter-spacing: 0.05rem;
+}
+}
+
